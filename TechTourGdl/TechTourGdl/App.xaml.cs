@@ -1,5 +1,8 @@
-﻿using Xamarin.Forms;
+﻿using TechTourGdl.Pages;
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
+[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace TechTourGdl
 {
 	public partial class App : Application
@@ -8,7 +11,7 @@ namespace TechTourGdl
 		{
 			InitializeComponent();
 
-			MainPage = new TechTourGdlPage();
+			MainPage = new NavigationPage(new TechTourGdlPage());
 		}
 
 		protected override void OnStart()

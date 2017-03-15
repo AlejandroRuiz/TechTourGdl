@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:vm="clr-namespace:TechTourGdl.ViewModel"
+	x:Class="TechTourGdl.Pages.TechTourGdlPage"
+	Title="{Binding Title}">
+	<!--
+	<ContentPage.ToolbarItems>
+		<ToolbarItem Text="+" Command="{Binding GoToAddNewDeveloperCommand}" />
+	</ContentPage.ToolbarItems>
+	<ContentPage.BindingContext>
+		<vm:TechTourGdlViewModel />
+	</ContentPage.BindingContext>
+	<ListView x:Name="_devsListView" ItemsSource="{Binding Developers}" RowHeight="150">
+		<ListView.ItemTemplate>
+			<DataTemplate>
+				<ImageCell Height="150" Command="{Binding Path=BindingContext.ShowDeveloperDetailsCommand, Source={x:Reference Name=_devsListView}}" CommandParameter="{Binding .}" Text="{Binding Name}" Detail="{Binding LastName}" ImageSource="{Binding PhotoUrl}">
+					<ImageCell.ContextActions>
+						<MenuItem Text="Delete" IsDestructive="true" Command="{Binding Path=BindingContext.RemoveDeveloperCommand, Source={x:Reference Name=_devsListView}}" CommandParameter="{Binding .}"  />
+					</ImageCell.ContextActions>
+				</ImageCell>
+			</DataTemplate>
+		</ListView.ItemTemplate>
+	</ListView>
+	-->
+</ContentPage>

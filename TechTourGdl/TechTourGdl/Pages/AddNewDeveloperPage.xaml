@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Class="TechTourGdl.Pages.AddNewDeveloperPage"
+	Title="{Binding Title}">
+	<!--
+	<ContentPage.Content>
+		<ScrollView>
+			<StackLayout Padding="30" Spacing="20">
+				<Image HorizontalOptions="Center" Source="{Binding PhotoUrl}" BackgroundColor="Silver" HeightRequest="200" WidthRequest="200" Aspect="AspectFill" />
+				<Entry Text="{Binding Name}" Placeholder="Name" />
+				<Entry Text="{Binding LastName}" Placeholder="LastName" />
+				<Button Text="Select Image" Command="{Binding SelectPhotoForDeveloperCommand}" />
+				<Button Text="Save Developer" Command="{Binding SaveDeveloperCommand}" />
+			</StackLayout>
+		</ScrollView>
+	</ContentPage.Content>
+	-->
+</ContentPage>
