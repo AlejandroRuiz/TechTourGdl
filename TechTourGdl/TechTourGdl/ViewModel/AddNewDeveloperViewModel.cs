@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Input;
-//using Plugin.Media;
-//using Plugin.Media.Abstractions;
+using Plugin.Media;
+using Plugin.Media.Abstractions;
 using TechTourGdl.Model;
 using Xamarin.Forms;
 
@@ -89,39 +89,38 @@ namespace TechTourGdl.ViewModel
 
 		public bool CanSaveDeveloper()
 		{
-			return !string.IsNullOrWhiteSpace(Name) && !string.IsNullOrWhiteSpace(LastName);
-			//return !string.IsNullOrWhiteSpace(Name) && !string.IsNullOrWhiteSpace(LastName) && !string.IsNullOrWhiteSpace(PhotoUrl);
+			return !string.IsNullOrWhiteSpace(Name) && !string.IsNullOrWhiteSpace(LastName) && !string.IsNullOrWhiteSpace(PhotoUrl);
 		}
 
 		public async void SelectPhotoForDeveloperAction()
 		{
-			//var options = new List<string>();
-			//if (CrossMedia.Current.IsCameraAvailable && CrossMedia.Current.IsTakePhotoSupported)
-			//{
-			//	options.Add("Take Photo");
-			//}
-			//if (CrossMedia.Current.IsPickPhotoSupported)
-			//{
-			//	options.Add("Pick Photo");
-			//}
-			//var result = await Application.Current.MainPage.DisplayActionSheet("Select Option", "Cancel", null, options.ToArray());
-			//if (result == "Take Photo")
-			//{
+			var options = new List<string>();
+			if (CrossMedia.Current.IsCameraAvailable && CrossMedia.Current.IsTakePhotoSupported)
+			{
+				options.Add("Take Photo");
+			}
+			if (CrossMedia.Current.IsPickPhotoSupported)
+			{
+				options.Add("Pick Photo");
+			}
+			var result = await Application.Current.MainPage.DisplayActionSheet("Select Option", "Cancel", null, options.ToArray());
+			if (result == "Take Photo")
+			{
 
-			//	var cameraoptions = new StoreCameraMediaOptions();
-			//	cameraoptions.PhotoSize = PhotoSize.Medium;
-			//	var photo = await CrossMedia.Current.TakePhotoAsync(cameraoptions);
-			//	if (photo == null)
-			//		return;
-			//	PhotoUrl = photo.Path;
-			//}
-			//else if (result == "Pick Photo")
-			//{
-			//	var photo = await CrossMedia.Current.PickPhotoAsync();
-			//	if (photo == null)
-			//		return;
-			//	PhotoUrl = photo.Path;
-			//}
+				var cameraoptions = new StoreCameraMediaOptions();
+				cameraoptions.PhotoSize = PhotoSize.Medium;
+				var photo = await CrossMedia.Current.TakePhotoAsync(cameraoptions);
+				if (photo == null)
+					return;
+				PhotoUrl = photo.Path;
+			}
+			else if (result == "Pick Photo")
+			{
+				var photo = await CrossMedia.Current.PickPhotoAsync();
+				if (photo == null)
+					return;
+				PhotoUrl = photo.Path;
+			}
 		}
 		
 	}

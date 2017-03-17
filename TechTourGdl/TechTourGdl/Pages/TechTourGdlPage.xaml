@@ -5,7 +5,6 @@
 	xmlns:vm="clr-namespace:TechTourGdl.ViewModel"
 	x:Class="TechTourGdl.Pages.TechTourGdlPage"
 	Title="{Binding Title}">
-	<!--
 	<ContentPage.ToolbarItems>
 		<ToolbarItem Text="+" Command="{Binding GoToAddNewDeveloperCommand}" />
 	</ContentPage.ToolbarItems>
@@ -23,5 +22,4 @@
 			</DataTemplate>
 		</ListView.ItemTemplate>
 	</ListView>
-	-->
 </ContentPage>

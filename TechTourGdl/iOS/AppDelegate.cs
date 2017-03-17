@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
-//using Plugin.Media;
+using Plugin.Media;
 using UIKit;
 
 namespace TechTourGdl.iOS
@@ -15,7 +15,7 @@ namespace TechTourGdl.iOS
 		{
 			global::Xamarin.Forms.Forms.Init();
 
-			//CrossMedia.Current.Initialize();
+			CrossMedia.Current.Initialize();
 
 			LoadApplication(new App());
 
